@@ -2,8 +2,20 @@
 The reason for this repository is to demonstrate some difference in Angular and Angular 2. As a start we are going to look at routing, this is because almost all web application uses some sort of navigation.
 
 First off we are using node and if not already installed download it here: https://nodejs.org/en/
+We are also using bower. 
+Bower is a command linte utility and use npm to install it. 
+	In Terminal run: 
+		* npm install -g bower
+
+More information about bower can be found here: https://bower.io
+
 
 Clone this project to your own computer. 
+	
+	In Terminal run:
+		* npm install
+		* bower install
+		* grunt serve
 
 In this project we are also using yeoman and generator, just to make life a bit more easy.
 
