@@ -1,4 +1,6 @@
-<div class="col-md-12" ng-controller="NavigationCtrl">
-
-
+<div class="navigation" ng-controller="NavigationCtrl">
+	<div class="title">HelloKitsular</div>
+	<nav ng-repeat="l in navLinks">
+		<a href="{{l.url}}">{{l.text}}</a>
+	</nav>
 </div>

@@ -1,6 +1,6 @@
 angular.module('HelloKitsular').controller('Page3Ctrl',function($scope, $routeParams){
 
-	$scope.title = "Third page";
+	$scope.title = "Parameter Passed:";
 	$scope.id= "No param passed";
 
 	$scope.checkParam = function(){
