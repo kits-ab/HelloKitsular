@@ -13,5 +13,5 @@ angular.module('HelloKitsular').controller('NavigationCtrl',function($scope){
 				"text": "Third page",
 				"url": "#page3"
 			}
-		]
+		];
 });
