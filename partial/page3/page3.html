@@ -4,6 +4,37 @@
 			<div class="col-mg-12 text-center">
 				<h2>{{title}}<span class="highlight">{{id}}</span>	
 			</div>
+			<div ng-show="user.userinfo.username" class="col-md-offset-3 col-md-6 userinfo">
+				<div ng-hide="{{user.userinfo}}" class="loader_container">
+					<div class="loader"></div>
+				</div>
+				<img ng-show="user.userinfo" class="" src="{{user.userinfo.gravatar_id}}" alt="gravatar url"/>
+				<p>
+					<span class="heading">User: </span>
+					<span class="highlight">{{user.userinfo.username}}</span>
+				</p>
+				<p>
+					<span class="heading">Id:</span>
+					<span class="highlight">{{user.userinfo.id}}</span>
+				</p>
+				<br>
+				<span class="view_repos" ng-click="getUserRepos()">View Repos<i class="fa fa-caret-down" aria-hidden="true"></i></span>
+			</div>
+		</div>
+	</div>	
+	<div class="container repos" ng-show="user.userrepos" >
+	<div class="col-md-offset-2 col-md-8">
+		<h2>Github repositories</h2>
+	</div>
+	<div ng-show="{{loading}}" class="loading loader"></div>
+	<div ng-show="{{!loading}}">
+		<div class="col-md-offset-3 col-md-6" ng-repeat="repo in user.userrepos">
+			<div class="repo_date">{{repo.updated | date : format : timezone}}</div>
+			<a href="{{repo.repo_url}}">
+				<div class="repo_name">{{repo.name}}</div>
+				<div class="repo_url">{{repo.repo_url}}</div>
+				<div class="repo_created">Created: {{repo.created | date : format : timezone}}</div>
+			</a>
 		</div>
 	</div>
 </div>
